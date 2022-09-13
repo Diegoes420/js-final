@@ -37,7 +37,7 @@
         <a class="navbar-brand empresa" href="../index.html"><img class="icono" src="../img/icono.png" alt="">TecnoHouse</a>
         <ul class="navbar-nav text-white mx-auto flex-row">
           <li class="nav-item m-3"><a href="../index.html" class="nav-link">Inicio</a></li>
-          <li class="nav-item m-3"><a href="#" class="nav-link active">Productos</a></li>
+          <li class="nav-item m-3"><a href="./productos.html" class="nav-link">Productos</a></li>
           <li class="nav-item m-3"><a href="./contacto.html" class="nav-link">Contacto</a></li>
         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
@@ -66,56 +66,73 @@
     </nav>
   </header>
 
-  <div class="container d-flex flex-nowrap contenedor_sec_prod">
-    <aside id="padreInputs" class="cont_categorias d-flex flex-column w-25">
-      <h2>Categorias:</h2>
-      <hr class="w-75 mx-auto my-2">
-      <div>
-        <input type="radio" value="todo" id="todo" name="filtro" class="input" checked>
-        <label for="todo">Todo</label>
-      </div>
-      <div>
-        <input type="radio" value="input_placa" id="input_placa" name="filtro" class="filtro">
-        <label for="input_placa">Placas Madre</label>
-      </div>
-      <div>
-        <input type="radio" value="input_procesador" id="input_procesador" name="filtro" class="filtro">
-        <label for="input_procesador">Procesadores</label>
-      </div>
-      <div>
-        <input type="radio" value="input_Placa_video" id="input_Placa_video" name="filtro" class="filtro">
-        <label for="input_Placa_video">Placas de video</label>
-      </div>
-      <div>
-        <input type="radio" value="input_Memoria_ram" id="input_Memoria_ram" name="filtro" class="filtro">
-        <label for="input_Memoria_ram">Memorias ram</label>
-      </div>
-      <div>
-        <input type="radio" value="input_fuente" id="input_fuente" name="filtro" class="filtro">
-        <label for="input_fuente">Fuentes de poder</label>
-      </div>
-      <div>
-        <input type="radio" value="input_discos_rigido" id="input_discos_rigido" name="filtro" class="filtro">
-        <label for="input_discos_rigido">Discos rigidos</label>
-      </div>
-      <div>
-        <input type="radio" value="input_discos_solidos" id="input_discos_solidos" name="filtro" class="filtro">
-        <label for="input_discos_solidos">Discos solidos</label>
-      </div>
-      <div>
-        <input type="radio" value="input_discos_m2" id="input_discos_m2" name="filtro" class="filtro">
-        <label for="input_discos_m2">Discos M2</label>
-      </div>
-      <div>
-        <input type="radio" value="input_Coolers" id="input_Coolers" name="filtro" class="filtro">
-        <label for="input_Coolers">Coolers</label>
-      </div>
-    </aside>
-    <!-- Productos -->
-    <div class="contenedorProductos w-75" id="contenedorProductos"></div>
-    <div class="contenedorFiltrado w-75" id="contenedorFiltrado"></div>
+  <div id="cont_mensaje" class="cont_mensaje d-none"></div>
 
-  </div>
+  
+  <section id="seccion_compra" class="container">
+      <!-- sacar estiloss -->
+      <div class="d-flex justify-content-center finalizarCompra flex-wrap row">
+          <h1 class="col-md-12">Finalizá tu compra</h1> 
+        <div class="padre_cont_prods">
+            <div id="cont-prods-compra" class="productos_finalizarCompra">
+                <h3 class="mb-4">Productos Agregados:</h3>
+            </div>
+            <div class="cont_total">
+                <p class="fw-bold">Total </p> 
+                <p class="fw-bold" id="precioTotalCompra"></p>
+            </div>
+        </div>
+        <div class="datosPersonales_finalizarCompra">
+            <h3>Datos Personales</h3>
+            <form id="formulario_compra" action="">
+                <div class="form-group mb-2">
+                    <label for="">Nombre</label>
+                    <input name="nombre" class="form-control" placeholder="John Doe" type="text">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="">Email</label>
+                    <input name="correo" class="form-control" placeholder="john@gmail.com" type="email">
+                </div>
+                <div class="form-group mb-4 d-flex flex-row flex-wrap telefono">
+                    <label class="w-100" for="" >Telefono</label>
+                    <input name="telefono" class="form-control type="text" placeholder="3513079987">
+                </div>
+                <h3 class="mb-3">Datos de la tarjeta de Credito</h3>
+                <div class="tarjeta_finalizarCompra">
+                    <div class="row justify-content-between">
+                        <div>
+                            <h3 class="fst-italic">Credit Card</h3>
+                            <img src="../img/chip.svg">
+                        </div>
+                        <div class="izquierda_tarjeta">
+                            <label for="">Número de tarjeta</label>
+                            <input class="numeroDeTarjeta" type="text" name="num_tarjeta" id="" placeholder="0000 - 0000 - 0000 - 0000">
+                            <label for="">Nombre</label>
+                            <input type="text" name="nom_tarjeta" id="" placeholder="JOHN DOE">
+                            <label for="">CVC</label>
+                            <input type="text" name="cvc_tarjeta" id="" placeholder="000">
+                        </div>
+                        <div class="derecha_tarjeta">
+                            <div class="row justify-content-end">
+                                <div class="col-md-6 d-flex flex-column">
+                                    <label for="">Hasta</label>
+                                    <input type="text" name="hasta_tarjeta" id="" placeholder="00/00">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p id="error_compra" class="text-bg-danger rounded-1 d-none"><i class="fa-solid fa-triangle-exclamation text-white mx-2"></i>Por favor, rellene los datos correctamente</p>
+                <div class="form-group">
+                    <input id="btn_compra_definitiva" class="btn btn-success mt-2 mb-5" type="submit" value="Confirmar compra">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
 
   <div class="icono_whastapp">
     <a href="https://wa.me/543513079987" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
@@ -190,6 +207,7 @@
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/carousel.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/compra.js"></script>
 </body>
 
 </html>

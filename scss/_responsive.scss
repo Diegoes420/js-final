@@ -60,8 +60,16 @@
             min-width: 80% !important;
         }
     }
-
+    //Compra
+    .finalizarCompra {
+        width: 90%;
+        margin: auto;
+        margin-top: 70px !important;
+        .izquierda_tarjeta, .derecha_tarjeta {
+            font-size: 0.7em !important;
+        }
     }
+}
 
 // `md` applies to small devices (landscape phones, less than 768px)
 @media screen and (max-width: 768px) {
@@ -103,6 +111,27 @@
     .icono_whastapp {
         right: 0.5rem;
     }
+    //Compra
+    .finalizarCompra {
+        flex-direction: column;
+        .productos_finalizarCompra {
+            h3 {
+                margin: 20px 0 10px 0;
+            }
+        }
+    }
+    .padre_cont_prods {
+        width: 100% !important;
+    }
+    .datosPersonales_finalizarCompra {
+        width: 100% !important;
+        h3 {
+            margin: 20px 0;
+        }
+    }
+//     .izquierda_tarjeta, .derecha_tarjeta {
+//         font-size: 12px;
+//     }
 }
 
 // `lg` applies to medium devices (tablets, less than 992px)
@@ -124,8 +153,7 @@
         }
 
     }
-
-
+    //productos
     .cont_categorias {
         width: 30% !important;
     }
@@ -141,6 +169,10 @@
             min-width: 40%;
         }
     }
+    //Compra
+    .izquierda_tarjeta {
+        width: 50% !important;
+    }
 }
 
 // `xl` applies to large devices (desktops, less than 1200px)
@@ -155,6 +187,10 @@
             width: 90% !important;
         }
 
+    }
+    //compra
+    .izquierda_tarjeta, .derecha_tarjeta {
+        font-size: 12px !important;
     }
 }
 

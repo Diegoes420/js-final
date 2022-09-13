@@ -20,8 +20,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <!-- SwiperJS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <!-- OWL carrousel -->
   <link rel="stylesheet" href="../css/owl.carousel.min.css">
   <link rel="stylesheet" href="../css/owl.theme.default.min.css">
@@ -50,17 +48,18 @@
         <div class="offcanvas offcanvas-end text-bg-white" tabindex="-1" id="offcanvasDarkNavbar"
           aria-labelledby="offcanvasDarkNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Carrito</h5>
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><span class="fa-solid fa-cart-shopping text-black"></span> Carrito</h5>
             <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
               aria-label="Close"></button>
           </div>
+          <hr class="d-block w-90 m-0 mx-auto">
           <div class="offcanvas-body">
-            <hr>
+            <!-- <hr> -->
             <div id="carrito-contenedor"></div>
-            <hr>
-            <p class="m-2">Precio Total: $<span id="precioTotal">0</span></p>
-            <button id="vaciar-carrito" class="btn btn-danger m-4">Vaciar Carrito</button>
-            <button class="btn btn-success m-4">Comprar</button>
+            <p id="mensaje_agrega">Agregá lo que quieras al carrito!</p>
+            <p class="mt-4 fw-bold">Total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="btn btn-danger m-4 d-none">Vaciar Carrito</button>
+            <a class="text-decoration-none" href="./compra.html"><button id="btn_ir_comprar" class="btn btn-success m-4">Comprar</button></a>
           </div>
         </div>
       </div>
@@ -70,6 +69,7 @@
   <!-- se oculta <- para evitar errores de consola -->
   <div class="container">
     <div class="contenedorProductos d-none"></div>
+    <div class="contenedorFiltrado d-none id="contenedorFiltrado"></div>
 
   </div>
 
@@ -176,7 +176,7 @@
   </footer>
 
 
-
+  <!-- LIBRERIAS / FRAMEWORKS -->
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -186,16 +186,12 @@
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <!-- SweetAlert -->
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Toastify -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <!-- Archivos JS -->
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/carousel.js"></script>
-  <script src="../js/stock.js"></script>
-  <script src="../js/alerts.js"></script>
-  <script src="../js/scripts.js"></script>
+  <script src="../js/main.js"></script>
   <script src="../js/formulario.js"></script>
 </body>
 
