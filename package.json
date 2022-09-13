@@ -1,0 +1,24 @@
+{
+  "name": "tecnohouse",
+  "version": "1.0.1",
+  "description": "Ecommerce de productos tecnologicos para coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alesso-Chiavarino/TecnoHouse.git"
+  },
+  "keywords": [
+    "tecnologia",
+    "tecnohouse",
+    "javascript"
+  ],
+  "author": "Alesso_Chiavarino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alesso-Chiavarino/TecnoHouse/issues"
+  },
+  "homepage": "https://github.com/Alesso-Chiavarino/TecnoHouse#readme"
+}

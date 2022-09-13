@@ -39,8 +39,8 @@
         <a class="navbar-brand empresa" href="../index.html"><img class="icono" src="../img/icono.png" alt="">TecnoHouse</a>
         <ul class="navbar-nav text-white mx-auto flex-row">
           <li class="nav-item m-3"><a href="../index.html" class="nav-link">Inicio</a></li>
-          <li class="nav-item m-3"><a href="#" class="nav-link active">Productos</a></li>
-          <li class="nav-item m-3"><a href="./contacto.html" class="nav-link">Contacto</a></li>
+          <li class="nav-item m-3"><a href="./productos.html" class="nav-link">Productos</a></li>
+          <li class="nav-item m-3"><a href="#" class="nav-link active">Contacto</a></li>
         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
           aria-controls="offcanvasDarkNavbar">
@@ -67,55 +67,56 @@
     </nav>
   </header>
 
-  <div class="container d-flex flex-nowrap contenedor_sec_prod">
-    <aside id="padreInputs" class="cont_categorias d-flex flex-column w-25">
-      <h2>Categorias:</h2>
-      <hr class="w-75 mx-auto my-2">
-      <div>
-        <input type="radio" value="todo" id="todo" name="filtro" class="input" checked>
-        <label for="todo">Todo</label>
-      </div>
-      <div>
-        <input type="radio" value="input_placa" id="input_placa" name="filtro" class="filtro">
-        <label for="input_placa">Placas Madre</label>
-      </div>
-      <div>
-        <input type="radio" value="input_procesador" id="input_procesador" name="filtro" class="filtro">
-        <label for="input_procesador">Procesadores</label>
-      </div>
-      <div>
-        <input type="radio" value="input_Placa_video" id="input_Placa_video" name="filtro" class="filtro">
-        <label for="input_Placa_video">Placas de video</label>
-      </div>
-      <div>
-        <input type="radio" value="input_Memoria_ram" id="input_Memoria_ram" name="filtro" class="filtro">
-        <label for="input_Memoria_ram">Memorias ram</label>
-      </div>
-      <div>
-        <input type="radio" value="input_fuente" id="input_fuente" name="filtro" class="filtro">
-        <label for="input_fuente">Fuentes de poder</label>
-      </div>
-      <div>
-        <input type="radio" value="input_discos_rigido" id="input_discos_rigido" name="filtro" class="filtro">
-        <label for="input_discos_rigido">Discos rigidos</label>
-      </div>
-      <div>
-        <input type="radio" value="input_discos_solidos" id="input_discos_solidos" name="filtro" class="filtro">
-        <label for="input_discos_solidos">Discos solidos</label>
-      </div>
-      <div>
-        <input type="radio" value="input_discos_m2" id="input_discos_m2" name="filtro" class="filtro">
-        <label for="input_discos_m2">Discos M2</label>
-      </div>
-      <div>
-        <input type="radio" value="input_Coolers" id="input_Coolers" name="filtro" class="filtro">
-        <label for="input_Coolers">Coolers</label>
-      </div>
-    </aside>
-    <!-- Productos -->
-    <div class="contenedorProductos w-75" id="contenedorProductos"></div>
-    <div class="contenedorFiltrado w-75" id="contenedorFiltrado"></div>
+  <!-- se oculta <- para evitar errores de consola -->
+  <div class="container">
+    <div class="contenedorProductos d-none"></div>
 
+  </div>
+
+  <div class="container contenedor_contacto">
+    <div class="row justify-content-center">
+      <div class="col-md-4 mt-5 bg-light rounded caja">
+        <h1 class="text-center font-weight-bold text-dark mt-2">Contactanos !</h1>
+        <hr class="bg-light">
+        <h5 class="text-center text-success"></h5>
+        <form action="" method="post" id="form-box" class="p-2">
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+            </div>
+            <input type="text" name="nombre" class="form-control mb-3" placeholder="Nombre">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+            </div>
+            <input type="email" name="email" class="form-control mb-3" placeholder="Correo">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+            </div>
+            <input type="text" name="telefono" class="form-control mb-3" placeholder="Telefóno">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa-solid fa-message"></i></span>
+            </div>
+            <textarea name="mensajex" id="msg" class="form-control mb-3 mensaje" placeholder="Mensaje" cols="30" rows="4"></textarea>
+          </div>
+          <div class="form-group padre_btn_form">
+            <input type="submit" name="submit" id="submit" class="btn btn-dark btn-block mt-4 w-100 btn_form" value="Enviar">
+          </div>
+        </form>
+        <div class="padre_cont_errores">
+          <div class="cont_errores">
+            <span class="mensaje_error d-none"><i class="fa-solid fa-triangle-exclamation icono_error"></i> Por favor, no use números en su nombre</span>
+            <span class="mensaje_error d-none"><i class="fa-solid fa-triangle-exclamation icono_error"></i> Por favor, ingrese un correo valido</span>
+            <span class="mensaje_error d-none"><i class="fa-solid fa-triangle-exclamation icono_error"></i> Por favor, no use letras en su número de telefono</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="icono_whastapp">
@@ -195,6 +196,7 @@
   <script src="../js/stock.js"></script>
   <script src="../js/alerts.js"></script>
   <script src="../js/scripts.js"></script>
+  <script src="../js/formulario.js"></script>
 </body>
 
 </html>

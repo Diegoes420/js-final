@@ -15,15 +15,32 @@ $(document).ready(function(){
             0: {
                 items: 1
             },
-            775: {
+            460: {
                 items: 2
             },
-            1200: {
+            768: {
                 items: 3
             },
-            1400: {
+            992: {
                 items: 4
-            }
+            },
+            1200: {
+                items: 5
+            },
         },
     });
 });
+
+// $(document).ready(function(){
+//     $("#owl2").owlCarousel({
+//         nav: true,
+//         navText: ["<i class='fas fa-chevron-left f-color-l'></i>","<i class='fas fa-chevron-right f-color-r'></i>"],
+//         slideBy: 1,
+//         items:1,
+//         dots: false,
+//         margin:10,
+//         autoplay: true,
+//         autoplayTimeout:4000,
+//         loop: true,
+//     });
+// });
