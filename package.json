@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alesso-Chiavarino/TecnoHouse.git"
+    "url": "git+https://github.com/Diegoes420/js-final.git"
   },
   "keywords": [
     "tecnologia",
     "tecnohouse",
     "javascript"
   ],
-  "author": "Alesso_Chiavarino",
+  "author": "Diego_Escudero",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Alesso-Chiavarino/TecnoHouse/issues"
+    "url": "https://github.com/Diegoes420/js-final.git"
   },
-  "homepage": "https://github.com/Alesso-Chiavarino/TecnoHouse#readme"
+  "homepage": "https://github.com/Diegoes420/js-final.git"
 }
